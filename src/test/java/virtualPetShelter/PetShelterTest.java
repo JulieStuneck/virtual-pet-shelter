@@ -50,7 +50,7 @@ public class PetShelterTest {
 	@Test
 	public void ShouldBeAbleToDecreaseHunger() {
 		Collection<VirtualPet> allPets = underTest.getAllPets();
-		underTest.reduceHunger(getAllPets(), 2));
+		underTest.reduceHunger.getAllPets, 2;
 		assertThat(allPets.getHunger, is(8));
 		
 		
