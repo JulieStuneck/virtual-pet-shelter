@@ -25,11 +25,7 @@ public class VirtualPetShelter {
 		pets.remove(pet.getVirtualPet(), pet);
 	}
 
-	public void reduceHunger(String virtualPet, int hunger) {
-		VirtualPet subtractFromHunger = findPet("name");
-		subtractFromHunger.reduceHunger(hunger);
 		
-	}
-
+		
 
 }

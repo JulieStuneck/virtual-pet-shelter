@@ -19,8 +19,8 @@ public class PetShelterTest {
 	@Before
 	public void setUp() {
 		underTest = new VirtualPetShelter();
-		pet1 = new VirtualPet("Elvis","wiggley boy", 10,1,1,1,1);
-		pet2 = new VirtualPet("Spot", "classic form", 1,1,1,1,1);
+		pet1 = new VirtualPet("Elvis","wiggley boy", 10,10,10,10,10);
+		pet2 = new VirtualPet("Spot", "classic form", 10,10,10,10,10);
 		
 	}
 	
@@ -49,9 +49,10 @@ public class PetShelterTest {
 	
 	@Test
 	public void ShouldBeAbleToDecreaseHunger() {
-		underTest.add(pet1);
-		underTest.reduceHunger(pet1.getVirtualPet(), 2);
-		assertThat(pet1.getHunger(), is (8));
+		Collection<VirtualPet> allPets = underTest.getAllPets();
+		underTest.reduceHunger(getAllPets(), 2));
+		assertThat(allPets.getHunger, is(8));
+		
 		
 	}
 	

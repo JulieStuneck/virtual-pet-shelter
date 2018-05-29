@@ -17,15 +17,8 @@ public class VirtualPet {
 		return name;
 	}
 
-	public int getHunger() {
-		
-		return hunger;
-	}
+	
 
-	public void reduceHunger(int hunger) {
-		hunger -= hunger;
-		
-	}
-
+	
 	
 }
