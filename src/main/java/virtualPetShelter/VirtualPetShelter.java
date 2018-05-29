@@ -25,21 +25,13 @@ public class VirtualPetShelter {
 		pets.remove(pet.getVirtualPet(), pet);
 	}
 
-	public int getHunger() {
-		
-		return 0;
-	}
-
-	public void feed() {
-		
-
+	public void reduceHunger(int hunger, int feed) {
+		hunger -= feed;
 		
 	}
-
-
 
 	
-	}
+	
 //	for(Entry<String, String> entry: students.entrySet()) {
 //	  System.out.println("The student's id is " + entry.getKey());
 //	  System.out.println("The student's name is " + entry.getValue());
