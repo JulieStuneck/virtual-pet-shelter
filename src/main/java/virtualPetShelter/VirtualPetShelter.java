@@ -25,7 +25,8 @@ public class VirtualPetShelter {
 		pets.remove(pet.getVirtualPet(), pet);
 	}
 
-		
-		
-
+	public Collection<VirtualPet> reduceHunger(int i) {
+				
+		return null;
+	}
 }

@@ -20,7 +20,7 @@ public class PetShelterTest {
 	public void setUp() {
 		underTest = new VirtualPetShelter();
 		pet1 = new VirtualPet("Elvis","wiggley boy", 10,10,10,10,10);
-		pet2 = new VirtualPet("Spot", "classic form", 10,10,10,10,10);
+		pet2 = new VirtualPet("Spot", "a true classic", 10,10,10,10,10);
 		
 	}
 	
@@ -48,11 +48,17 @@ public class PetShelterTest {
 	}
 	
 	@Test
-	public void ShouldBeAbleToDecreaseHunger() {
+	public void ShouldBeAbleToReduceAllPetsHunger() {
 		Collection<VirtualPet> allPets = underTest.getAllPets();
-		underTest.reduceHunger.getAllPets, 2;
+		Collection<VirtualPet> allPets = underTest.reduceHunger(2);
 		assertThat(allPets.getHunger, is(8));
 		
+//		for(Entry<String, String> entry: students.entrySet()) {
+//			  System.out.println("The student's id is " + entry.getKey());
+//			  System.out.println("The student's name is " + entry.getValue());
+//			}
+//		Collection<String> studentNames = students.values();
+//		System.out.println("The student names are " + studentNames);
 		
 	}
 	
