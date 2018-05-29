@@ -25,8 +25,18 @@ public class VirtualPetShelter {
 		pets.remove(pet.getVirtualPet(), pet);
 	}
 
-	public Collection<VirtualPet> reduceHunger(int i) {
-				
-		return null;
+	public void reduceHunger() {
+		VirtualPet subtractFromHunger = pets.values(hunger);
+		hunger -= hunger;
+		
 	}
+//	for(Entry<String, String> entry: students.entrySet()) {
+//	  System.out.println("The student's id is " + entry.getKey());
+//	  System.out.println("The student's name is " + entry.getValue());
+//
+//Collection<String> studentNames = students.values();
+//System.out.println("The student names are " + studentNames);
+
+
+	
 }

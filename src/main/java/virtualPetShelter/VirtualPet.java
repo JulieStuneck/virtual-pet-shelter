@@ -13,12 +13,11 @@ public class VirtualPet {
 	}
 
 	public String getVirtualPet() {
-		
 		return name;
 	}
 
-	
+	public Object getHunger() {
+		return hunger;
+	}
 
-	
-	
 }
