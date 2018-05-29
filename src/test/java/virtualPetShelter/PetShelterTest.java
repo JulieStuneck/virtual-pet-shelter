@@ -10,6 +10,8 @@ import java.util.Collection;
 import org.junit.Before;
 import org.junit.Test;
 
+import VirtualPet.VirtualPet;
+
 public class PetShelterTest {
 	
 	VirtualPetShelter underTest;
@@ -48,12 +50,13 @@ public class PetShelterTest {
 	}
 	
 	@Test
-	public void ShouldBeAbleToReduceAllPetsHunger() {		
+	public void FeedingReducesAllPetsHunger() {		
 		underTest.add(pet1);
 		underTest.add(pet2);
-		underTest.reduceHunger();
-		assertThat(pet1.getHunger(), is(8));
-		assertThat(pet2.getHunger(), is(8));
+		underTest.feed();
+		int check = underTest.getHunger();
+		assertEquals(8, check);
+		
 		
 //		Collection<VirtualPet> allPets = underTest.getAllPets();
 //		Collection<VirtualPet> allPets = underTest.reduceHunger(2);
