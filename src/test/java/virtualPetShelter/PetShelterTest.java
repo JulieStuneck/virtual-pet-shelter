@@ -11,6 +11,7 @@ import java.util.Collection;
 import org.junit.Before;
 import org.junit.Test;
 
+
 public class PetShelterTest {
 
 	VirtualPetShelter underTest;
@@ -53,8 +54,13 @@ public class PetShelterTest {
 	@Test
 	public void ReduceHungerForPet1() {
 		underTest.add(pet1);
-		underTest.reduceHunger((int) pet1.getHunger(), 2);
-		assertThat(pet1.getHunger(), is(8));
+		//underTest.feed();
+		int check = underTest.reduceHunger();
+		assertThat(pet1.getHunger(), is (8));
+		
+		
+//		underTest.reduceHunger((int) pet1.getHunger(), 2);
+//		assertThat(pet1.getHunger(), is(8));
 
 		// VirtualPet underTest = new VirtualPet(100, 0, 0, 0, 0);
 		// underTest.feed();
@@ -72,6 +78,14 @@ public class PetShelterTest {
 		// Collection<String> studentNames = students.values();
 		// System.out.println("The student names are " + studentNames);
 
+	}
+	
+	@Test
+	public void ReturnDescriptionOfPet1() {
+		underTest.add(pet1);
+		String identifiedPet = underTest.findDescription(pet1.getDescription());
+		assertThat
+		
 	}
 
 }

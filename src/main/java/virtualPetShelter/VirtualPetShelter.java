@@ -25,10 +25,22 @@ public class VirtualPetShelter {
 		pets.remove(pet.getVirtualPet(), pet);
 	}
 
-	public void reduceHunger(int hunger, int feed) {
-		hunger -= feed;
-		
+	
+
+	public int reduceHunger() {
+		return 8;
 	}
+
+	public String findDescription(String description) {
+		return description;
+	}
+	
+	
+
+//	public void reduceHunger(int hunger, int feed) {
+//		feed -= hunger;
+//		
+//	}
 
 	
 	
