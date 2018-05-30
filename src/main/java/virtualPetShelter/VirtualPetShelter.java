@@ -31,12 +31,19 @@ public class VirtualPetShelter {
 	// for (BankAccount current : accounts.values()) {
 	// current.deposit();
 
-	
 	public void showPets() {
 		for (VirtualPet current : pets.values()) {
 			System.out.println(current.getVirtualPet() + " " + current.getDescription() + current.getHunger() + " "
 					+ current.getThirst() + current.getHappiness() + current.getSleepiness());
-		
+
 		}
 	}
+
+	public void feedAll() {
+		for (VirtualPet current : pets.values()) {
+			current.getHunger() -= hunger;
+		}
+
+	}
+
 }

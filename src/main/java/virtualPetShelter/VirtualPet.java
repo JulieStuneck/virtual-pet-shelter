@@ -30,19 +30,18 @@ public class VirtualPet {
 	public String getDescription() {
 		return description;
 	}
-	
+
 	public int getThirst() {
 		return thirst;
 	}
-	
+
 	public int getHappiness() {
 		return happiness;
 	}
-		
-		public int getSleepiness() {
-			return sleepiness;
-		
+
+	public int getSleepiness() {
+		return sleepiness;
+
 	}
 
-	
 }

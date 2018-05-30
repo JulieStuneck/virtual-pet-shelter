@@ -11,7 +11,6 @@ import java.util.Collection;
 import org.junit.Before;
 import org.junit.Test;
 
-
 public class PetShelterTest {
 
 	VirtualPetShelter underTest;
@@ -28,7 +27,7 @@ public class PetShelterTest {
 
 	@Test
 	public void shouldBeAbleToAddPet() {
-		underTest.add(pet1);
+		underTest.add(pet1);// not sure how this is supposed to be used in the App
 		VirtualPet identifiedPet = underTest.findPet("Elvis");
 		assertThat(identifiedPet, is(pet1));
 	}
@@ -38,7 +37,8 @@ public class PetShelterTest {
 		underTest.add(pet1);
 		underTest.add(pet2);
 		Collection<VirtualPet> allPets = underTest.getAllPets();
-		// or assertThat(allPets, containsInAnyOrder(pet1, pet2));
+		// or assertThat(allPets, containsInAnyOrder(pet1, pet2)); - (comment from
+		// video)
 		assertEquals(2, allPets.size());
 
 	}
@@ -46,36 +46,42 @@ public class PetShelterTest {
 	@Test
 	public void shouldBeAbleToRemoveAPetForAdoption() {
 		underTest.add(pet1);
-		underTest.remove(pet1);
+		underTest.remove(pet1); // not sure how to use this in the App
 		VirtualPet identifiedPet = underTest.findPet(pet1.getVirtualPet());
 		assertThat(identifiedPet, is(nullValue()));
 	}
 
 	@Test
 	public void ReduceHungerForAllPets() {
-		VirtualPet underTest = new VirtualPet("","", 10, 10, 10, 10);
-		underTest.feedAll();
+		VirtualPet underTest = new VirtualPet("", "", 10, 10, 10, 10);
+		underTest.feedAll(); // eclipse wants to add a method to VP instead of VPShelter
 		int check = underTest.getHunger();
-		assert.equals(8, check);
+		assertEquals(8, check);
 
 	}
-	
+
 	@Test
 	public void ShouldBeAbleToReduceThirstAfterWaterAll() {
-	VirtualPet underTest = new VirtualPet("", "", 10, 10, 10, 10); 
-		underTest.water(); 
-		int check = underTest.getThirst(); 
-		assertEquals(8, check); 
-
+		VirtualPet underTest = new VirtualPet("", "", 10, 10, 10, 10);
+		underTest.water();
+		int check = underTest.getThirst();
+		assertEquals(8, check);
 
 	}
-	
+
 	@Test
 	public void ReturnDescriptionOfPet1() {
 		underTest.add(pet1);
 		String identifiedPet = underTest.findDescription(pet1.getDescription());
 		assertThat(pet1.getDescription(), is(pet1.description));
 		
+	}
+		
+		@Test
+		public void HappinessShouldIncrease() {
+			
+		}
+
 	}
 
 }
