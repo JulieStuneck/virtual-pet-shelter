@@ -52,36 +52,36 @@ public class PetShelterTest {
 	}
 
 	@Test
-	public void ReduceHungerForAllPets() {
-		VirtualPet underTest = new VirtualPet("", "", 10, 10, 10, 10);
-		underTest.feedAll(); // eclipse wants to add a method to VP instead of VPShelter
-		int check = underTest.getHunger();
+	public void ReduceHungerForAllPets() {		
+		underTest.feedAll(); 
+		int check = pet1.getHunger();
 		assertEquals(8, check);
-
+		int check2 = pet2.getHunger();
+		assertEquals(18, check2);
 	}
 
-	@Test
-	public void ShouldBeAbleToReduceThirstAfterWaterAll() {
-		VirtualPet underTest = new VirtualPet("", "", 10, 10, 10, 10);
-		underTest.water();
-		int check = underTest.getThirst();
-		assertEquals(8, check);
+//	@Test
+//	public void ShouldBeAbleToReduceThirstAfterWaterAll() {
+//		VirtualPet underTest = new VirtualPet("", "", 10, 10, 10, 10);
+//		underTest.water();
+//		int check = underTest.getThirst();
+//		assertEquals(8, check);
 
-	}
+//	}
 
-	@Test
-	public void ReturnDescriptionOfPet1() {
-		underTest.add(pet1);
-		String identifiedPet = underTest.findDescription(pet1.getDescription());
-		assertThat(pet1.getDescription(), is(pet1.description));
+//	@Test
+//	public void ReturnDescriptionOfPet1() {
+//		underTest.add(pet1);
+//		String identifiedPet = underTest.findDescription(pet1.getDescription());
+//		assertThat(pet1.getDescription(), is(pet1.description));
+//		
+//	}
 		
-	}
-		
-		@Test
-		public void HappinessShouldIncrease() {
+//	@Test
+//	public void HappinessShouldIncrease() {
+//		
 			
-		}
+//		}
 
 	}
 
-}

@@ -44,4 +44,9 @@ public class VirtualPet {
 
 	}
 
+	public void feed() {
+		hunger -= 2;
+		
+	}
+
 }

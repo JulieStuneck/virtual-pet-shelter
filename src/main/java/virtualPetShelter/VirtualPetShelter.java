@@ -1,5 +1,7 @@
 package virtualPetShelter;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -28,8 +30,6 @@ public class VirtualPetShelter {
 	public String findDescription(String description) {
 		return description;
 	}
-	// for (BankAccount current : accounts.values()) {
-	// current.deposit();
 
 	public void showPets() {
 		for (VirtualPet current : pets.values()) {
@@ -38,10 +38,10 @@ public class VirtualPetShelter {
 
 		}
 	}
-
 	public void feedAll() {
-		for (VirtualPet current : pets.values()) {
-			current.getHunger() -= hunger;
+		for (VirtualPet pet : pets.values()) {
+			pet.feed();
+		
 		}
 
 	}
