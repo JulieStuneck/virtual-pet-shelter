@@ -69,8 +69,8 @@ public class VirtualPetShelter {
 
 	public void playOne() {
 		Set<String> name = pets.keySet();
-			for (virtualPet pets: pets.keySet() = pet); 
-			pet.play();
+			for (pets.keySet().equals(name);;) { 
+			((VirtualPet) name).play();
 	}
-
+	}
 }
