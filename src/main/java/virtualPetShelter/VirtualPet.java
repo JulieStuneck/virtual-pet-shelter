@@ -49,4 +49,22 @@ public class VirtualPet {
 		
 	}
 
+	public void water() {
+		thirst -= 2;
+		
+	}
+
+	public void play() {
+		hunger += 2;
+		thirst += 3;
+		sleepiness += 5;
+
+	}
+
+	public void tick() {
+		happiness += 10;
+
+		
+	}
+
 }

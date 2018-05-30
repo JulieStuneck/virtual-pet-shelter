@@ -22,7 +22,7 @@ public class VirtualPetShelterApp {
 		System.out.println("Thanks for volunteering at our shelter!");
 
 		System.out.println("This is the status of your pets:");
-		System.out.println();
+		myVirtualPetShelter.showPets();
 
 		System.out.println("Try to get our happiness level to 1000.");
 		System.out.println("How would you like to help?");
@@ -38,18 +38,27 @@ public class VirtualPetShelterApp {
 			System.out.println("Thanks for feeding us!");
 		}
 
-//		else if (userChoice.equals("2")) {
-//			myVirtualPetShelter.waterAll();
-//		}
+		else if (userChoice.equals("2")) {
+			myVirtualPetShelter.waterAll();
+			System.out.println("Thank You for the cool drink of water.");
+		}
 
 		else if (userChoice.equals("3")) {
+			
+			System.out.println("Type in the name of the pet you would like to play with.");
+			
+			String playPetName = input.next();
+			System.out.println(playPetName + " says \"thanks for playing with me!\"");
 
 		}
 
 		else if (userChoice.equals("4")) {
 			System.out.println("What is the name of the pet would you like to adopt?");
-			String odoptPetName = input.next();
-			//myVirtualPetShelter.remove(odoptPetName);
+			String adoptPetName = input.next();
+			myVirtualPetShelter.pets.remove(myVirtualPetShelter.getVirtualPet(adoptPetName));
+			//myVirtualPetShelter.remove(myVirtualPet.getVirtualPet(adoptPetName));
+			//myBank.close(myBank.findAccount(closeChoice));
+			//pets.remove(pet.getVirtualPet(), pet);
 
 		}
 
@@ -58,10 +67,15 @@ public class VirtualPetShelterApp {
 			String newPetName = input.next();
 			System.out.println("How would you discribe " + newPetName + "?");
 			String newPetDescription = input.next();
-			VirtualPet pet4 = new VirtualPet(newPetName, newPetDescription, 10, 10, 10, 10);
+			//add a pet to map without naming the object
+			myVirtualPetShelter.add(new VirtualPet(newPetName, newPetDescription, 10, 10, 10, 10));
 		}
+		
+//		int tick = 0;
+//		myVirtualPetShelter.tick += 1;
+//		myVirtualPetShelter.tick();
+//
+//		input.close();
+//	} while (myVirtualPetShelter.gethappiness < 100);
 
-		input.close();
-	//} while (happiness <= 1000);
-
-}
+}}

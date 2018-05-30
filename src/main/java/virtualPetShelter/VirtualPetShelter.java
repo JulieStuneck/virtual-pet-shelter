@@ -33,8 +33,8 @@ public class VirtualPetShelter {
 
 	public void showPets() {
 		for (VirtualPet current : pets.values()) {
-			System.out.println(current.getVirtualPet() + " " + current.getDescription() + current.getHunger() + " "
-					+ current.getThirst() + current.getHappiness() + current.getSleepiness());
+			System.out.println(current.getVirtualPet() + " " + current.getDescription() + " " + current.getHunger() + " "
+					+ current.getThirst() + " " + current.getHappiness() + " " + current.getSleepiness());
 
 		}
 	}
@@ -44,6 +44,27 @@ public class VirtualPetShelter {
 		
 		}
 
+	}
+
+	public void waterAll() {
+		for (VirtualPet pet: pets.values()) {
+			pet.water();
+		}
+		
+	}
+
+	public void playAll() {
+		for (VirtualPet pet: pets.values()) {
+			pet.play();
+		}
+		
+	}
+
+	public void tick() {
+		for(VirtualPet pet: pets.values()) {
+			pet.tick();
+		}
+		
 	}
 
 }

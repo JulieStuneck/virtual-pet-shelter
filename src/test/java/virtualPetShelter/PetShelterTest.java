@@ -46,13 +46,15 @@ public class PetShelterTest {
 	@Test
 	public void shouldBeAbleToRemoveAPetForAdoption() {
 		underTest.add(pet1);
-		underTest.remove(pet1); // not sure how to use this in the App
+		underTest.remove(pet1); 
 		VirtualPet identifiedPet = underTest.findPet(pet1.getVirtualPet());
 		assertThat(identifiedPet, is(nullValue()));
 	}
 
 	@Test
-	public void ReduceHungerForAllPets() {		
+	public void ReduceHungerForAllPets() {	
+		underTest.add(pet1);
+		underTest.add(pet2);
 		underTest.feedAll(); 
 		int check = pet1.getHunger();
 		assertEquals(8, check);
@@ -60,15 +62,17 @@ public class PetShelterTest {
 		assertEquals(18, check2);
 	}
 
-//	@Test
-//	public void ShouldBeAbleToReduceThirstAfterWaterAll() {
-//		VirtualPet underTest = new VirtualPet("", "", 10, 10, 10, 10);
-//		underTest.water();
-//		int check = underTest.getThirst();
-//		assertEquals(8, check);
-
-//	}
-
+	@Test
+	public void ShouldBeAbleToReduceThirstAfterWaterAll() {
+		underTest.add(pet1);
+		underTest.add(pet2);
+		underTest.waterAll();
+		int check = pet1.getThirst();
+		assertEquals(8, check);
+		int check2 = pet2.getThirst();
+		assertEquals(18, check2);
+	}
+//
 //	@Test
 //	public void ReturnDescriptionOfPet1() {
 //		underTest.add(pet1);
@@ -77,11 +81,29 @@ public class PetShelterTest {
 //		
 //	}
 		
-//	@Test
-//	public void HappinessShouldIncrease() {
-//		
+	@Test
+	public void AllSleepinessShouldIncreaseBy5WithPlay() {
+		underTest.add(pet1);
+		underTest.add(pet2);
+		underTest.playAll();
+		int check = pet1.getSleepiness();
+		assertEquals(15, check);
+		int check2 = pet2.getSleepiness();
+		assertEquals (25, check2);
 			
-//		}
+	}
+	
+	@Test
+	public void TickShouldIncreaseHappinessBy10() {
+		underTest.add(pet1);
+		underTest.add(pet2);
+		underTest.tick();
+		int check = pet1.getHappiness();
+		assertEquals(20, check);
+		int check2 = pet2.getHappiness();
+		assertEquals(30, check2);
+	}
+	
 
 	}
 
