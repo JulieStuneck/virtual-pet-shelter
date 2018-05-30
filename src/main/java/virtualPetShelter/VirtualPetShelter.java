@@ -25,32 +25,18 @@ public class VirtualPetShelter {
 		pets.remove(pet.getVirtualPet(), pet);
 	}
 
-	
-
-	public int reduceHunger() {
-		return 8;
-	}
-
 	public String findDescription(String description) {
 		return description;
 	}
-	
-	
-
-//	public void reduceHunger(int hunger, int feed) {
-//		feed -= hunger;
-//		
-//	}
+	// for (BankAccount current : accounts.values()) {
+	// current.deposit();
 
 	
-	
-//	for(Entry<String, String> entry: students.entrySet()) {
-//	  System.out.println("The student's id is " + entry.getKey());
-//	  System.out.println("The student's name is " + entry.getValue());
-//
-//Collection<String> studentNames = students.values();
-//System.out.println("The student names are " + studentNames);
-
-
-	
+	public void showPets() {
+		for (VirtualPet current : pets.values()) {
+			System.out.println(current.getVirtualPet() + " " + current.getDescription() + current.getHunger() + " "
+					+ current.getThirst() + current.getHappiness() + current.getSleepiness());
+		
+		}
+	}
 }

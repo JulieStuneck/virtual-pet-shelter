@@ -21,8 +21,8 @@ public class PetShelterTest {
 	@Before
 	public void setUp() {
 		underTest = new VirtualPetShelter();
-		pet1 = new VirtualPet("Elvis", "wiggley boy", 10, 10, 10, 10, 10);
-		pet2 = new VirtualPet("Spot", "a true classic", 10, 10, 10, 10, 10);
+		pet1 = new VirtualPet("Elvis", "wiggley boy", 10, 10, 10, 10);
+		pet2 = new VirtualPet("Spot", "a true classic", 20, 20, 20, 20);
 
 	}
 
@@ -52,31 +52,21 @@ public class PetShelterTest {
 	}
 
 	@Test
-	public void ReduceHungerForPet1() {
-		underTest.add(pet1);
-		//underTest.feed();
-		int check = underTest.reduceHunger();
-		assertThat(pet1.getHunger(), is (8));
-		
-		
-//		underTest.reduceHunger((int) pet1.getHunger(), 2);
-//		assertThat(pet1.getHunger(), is(8));
+	public void ReduceHungerForAllPets() {
+		VirtualPet underTest = new VirtualPet("","", 10, 10, 10, 10);
+		underTest.feedAll();
+		int check = underTest.getHunger();
+		assert.equals(8, check);
 
-		// VirtualPet underTest = new VirtualPet(100, 0, 0, 0, 0);
-		// underTest.feed();
-		// int check = underTest.getHunger();
-		// assertEquals(75, check);
+	}
+	
+	@Test
+	public void ShouldBeAbleToReduceThirstAfterWaterAll() {
+	VirtualPet underTest = new VirtualPet("", "", 10, 10, 10, 10); 
+		underTest.water(); 
+		int check = underTest.getThirst(); 
+		assertEquals(8, check); 
 
-		// Collection<VirtualPet> allPets = underTest.getAllPets();
-		// Collection<VirtualPet> allPets = underTest.reduceHunger(2);
-		// assertThat(allPets.getHunger, is(8));
-
-		// for(Entry<String, String> entry: students.entrySet()) {
-		// System.out.println("The student's id is " + entry.getKey());
-		// System.out.println("The student's name is " + entry.getValue());
-		// }
-		// Collection<String> studentNames = students.values();
-		// System.out.println("The student names are " + studentNames);
 
 	}
 	
@@ -84,7 +74,7 @@ public class PetShelterTest {
 	public void ReturnDescriptionOfPet1() {
 		underTest.add(pet1);
 		String identifiedPet = underTest.findDescription(pet1.getDescription());
-		assertThat
+		assertThat(pet1.getDescription(), is(pet1.description));
 		
 	}
 
