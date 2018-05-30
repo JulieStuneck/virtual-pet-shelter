@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class VirtualPetShelter {
 
@@ -33,15 +34,14 @@ public class VirtualPetShelter {
 
 	public void showPets() {
 		for (VirtualPet current : pets.values()) {
-			System.out.println(current.getVirtualPet() + " " + current.getDescription() + " " + current.getHunger() + " "
-					+ current.getThirst() + " " + current.getHappiness() + " " + current.getSleepiness());
+			System.out.println(current.getVirtualPet() + ": " + current.getDescription() + "; Hunger level = " + current.getHunger() + "; Thurst level = "
+					+ current.getThirst() + "; Happiness level = " + current.getHappiness() + "; Sleepiness level = " + current.getSleepiness());
 
 		}
 	}
 	public void feedAll() {
-		for (VirtualPet pet : pets.values()) {
-			pet.feed();
-		
+		for (VirtualPet pet: pets.values()) {
+			pet.feed();		
 		}
 
 	}
@@ -65,6 +65,12 @@ public class VirtualPetShelter {
 			pet.tick();
 		}
 		
+	}
+
+	public void playOne() {
+		Set<String> name = pets.keySet();
+			for (virtualPet pets: pets.keySet() = pet); 
+			pet.play();
 	}
 
 }

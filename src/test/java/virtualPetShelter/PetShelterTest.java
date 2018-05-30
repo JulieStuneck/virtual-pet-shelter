@@ -104,6 +104,15 @@ public class PetShelterTest {
 		assertEquals(30, check2);
 	}
 	
-
+	@Test
+	public void PlayShouldChangeOnePetsVariables() {
+		underTest.add(pet1);
+		underTest.add(pet2);
+		underTest.playOne();
+		int check = pet1.getSleepiness();
+		assertEquals(15, check);
+		int check2 = pet2.getSleepiness();
+		assertEquals(20, check2);
+	}
 	}
 
