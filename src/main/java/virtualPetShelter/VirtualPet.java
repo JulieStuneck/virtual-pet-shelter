@@ -46,12 +46,12 @@ public class VirtualPet {
 
 	public void feed() {
 		hunger -= 2;
-		
+
 	}
 
 	public void water() {
 		thirst -= 2;
-		
+
 	}
 
 	public void play() {
@@ -64,7 +64,6 @@ public class VirtualPet {
 	public void tick() {
 		happiness += 10;
 
-		
 	}
 
 }

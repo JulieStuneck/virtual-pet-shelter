@@ -1,7 +1,5 @@
 package virtualPetShelter;
 
-import static org.junit.Assert.assertEquals;
-
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -34,43 +32,60 @@ public class VirtualPetShelter {
 
 	public void showPets() {
 		for (VirtualPet current : pets.values()) {
-			System.out.println(current.getVirtualPet() + ": " + current.getDescription() + "; Hunger level = " + current.getHunger() + "; Thurst level = "
-					+ current.getThirst() + "; Happiness level = " + current.getHappiness() + "; Sleepiness level = " + current.getSleepiness());
+			System.out.println(current.getVirtualPet() + ": " + current.getDescription() + "; Hunger level = "
+					+ current.getHunger() + "; Thurst level = " + current.getThirst() + "; Happiness level = "
+					+ current.getHappiness() + "; Sleepiness level = " + current.getSleepiness());
 
 		}
 	}
+
 	public void feedAll() {
-		for (VirtualPet pet: pets.values()) {
-			pet.feed();		
+		for (VirtualPet pet : pets.values()) {
+			pet.feed();
 		}
 
 	}
 
 	public void waterAll() {
-		for (VirtualPet pet: pets.values()) {
+		for (VirtualPet pet : pets.values()) {
 			pet.water();
 		}
-		
+
 	}
 
 	public void playAll() {
-		for (VirtualPet pet: pets.values()) {
+		for (VirtualPet pet : pets.values()) {
 			pet.play();
 		}
-		
+
 	}
 
 	public void tick() {
-		for(VirtualPet pet: pets.values()) {
+		for (VirtualPet pet : pets.values()) {
 			pet.tick();
 		}
-		
+
 	}
 
 	public void playOne() {
 		Set<String> name = pets.keySet();
-			for (pets.keySet().equals(name);;) { 
+		for (pets.keySet().equals(name);;) {
 			((VirtualPet) name).play();
+		
+		//pets.keySet().play();
+		
+//		pets.keySet().equals(name);
+//		((VirtualPet) name).play();
+		
+//		for (pets.keySet().equals(name);;) {
+//			((VirtualPet) name).play();
+		}
 	}
-	}
-}
+
+	public void reportHappiness() {
+		for (VirtualPet pet : pets.values()) {
+			pet.getHappiness();
+		}
+		
+	}}
+

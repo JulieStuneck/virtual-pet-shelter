@@ -1,0 +1,1 @@
+Goal is to increase pets' happiness to 100 by interacting with them. Each action increases each pets' happiness by 10.

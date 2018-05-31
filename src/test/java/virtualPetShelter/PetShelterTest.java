@@ -27,7 +27,7 @@ public class PetShelterTest {
 
 	@Test
 	public void shouldBeAbleToAddPet() {
-		underTest.add(pet1);// not sure how this is supposed to be used in the App
+		underTest.add(pet1);
 		VirtualPet identifiedPet = underTest.findPet("Elvis");
 		assertThat(identifiedPet, is(pet1));
 	}
@@ -46,16 +46,16 @@ public class PetShelterTest {
 	@Test
 	public void shouldBeAbleToRemoveAPetForAdoption() {
 		underTest.add(pet1);
-		underTest.remove(pet1); 
+		underTest.remove(pet1);
 		VirtualPet identifiedPet = underTest.findPet(pet1.getVirtualPet());
 		assertThat(identifiedPet, is(nullValue()));
 	}
 
 	@Test
-	public void ReduceHungerForAllPets() {	
+	public void ReduceHungerForAllPets() {
 		underTest.add(pet1);
 		underTest.add(pet2);
-		underTest.feedAll(); 
+		underTest.feedAll();
 		int check = pet1.getHunger();
 		assertEquals(8, check);
 		int check2 = pet2.getHunger();
@@ -72,15 +72,7 @@ public class PetShelterTest {
 		int check2 = pet2.getThirst();
 		assertEquals(18, check2);
 	}
-//
-//	@Test
-//	public void ReturnDescriptionOfPet1() {
-//		underTest.add(pet1);
-//		String identifiedPet = underTest.findDescription(pet1.getDescription());
-//		assertThat(pet1.getDescription(), is(pet1.description));
-//		
-//	}
-		
+
 	@Test
 	public void AllSleepinessShouldIncreaseBy5WithPlay() {
 		underTest.add(pet1);
@@ -89,10 +81,10 @@ public class PetShelterTest {
 		int check = pet1.getSleepiness();
 		assertEquals(15, check);
 		int check2 = pet2.getSleepiness();
-		assertEquals (25, check2);
-			
+		assertEquals(25, check2);
+
 	}
-	
+
 	@Test
 	public void TickShouldIncreaseHappinessBy10() {
 		underTest.add(pet1);
@@ -103,7 +95,7 @@ public class PetShelterTest {
 		int check2 = pet2.getHappiness();
 		assertEquals(30, check2);
 	}
-	
+
 	@Test
 	public void PlayShouldChangeOnePetsVariables() {
 		underTest.add(pet1);
@@ -112,7 +104,15 @@ public class PetShelterTest {
 		int check = pet1.getSleepiness();
 		assertEquals(15, check);
 		int check2 = pet2.getSleepiness();
-		assertEquals(20, check2);
+		assertEquals(25, check2);
 	}
+	
+	@Test
+	public void ShowPetsHppiness() {
+		underTest.add(pet1);
+		underTest.reportHappiness();
+		int check = pet1.getHappiness();
+		assertEquals(10, check);
+		
 	}
-
+}
