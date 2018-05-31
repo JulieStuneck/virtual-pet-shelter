@@ -108,7 +108,7 @@ public class PetShelterTest {
 	}
 	
 	@Test
-	public void ShowPetsHppiness() {
+	public void ShowPetsHappiness() {
 		underTest.add(pet1);
 		underTest.reportHappiness();
 		int check = pet1.getHappiness();

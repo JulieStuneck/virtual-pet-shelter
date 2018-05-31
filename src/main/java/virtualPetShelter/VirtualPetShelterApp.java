@@ -17,39 +17,48 @@ public class VirtualPetShelterApp {
 		myVirtualPetShelter.add(pet1);
 		myVirtualPetShelter.add(pet2);
 		myVirtualPetShelter.add(pet3);
+		
+		String userChoice = input.next();
 
 		do {
 			System.out.println("Thanks for volunteering at our shelter!");
+			System.out.println();
 
 			System.out.println("This is the status of the pets:");
 			myVirtualPetShelter.showPets();
+			System.out.println();
 
-			System.out.println("Try to get our happiness level to 1000.");
+			System.out.println("Try to get our happiness level to 100.");
 			System.out.println("How would you like to help?");
 			System.out.println("Enter 1 - to feed all the pets");
 			System.out.println("Enter 2 - to give water to all the pets");
 			System.out.println("Enter 3 - to play with one of the pets");
 			System.out.println("Enter 4 - to adopt one of the pets");
 			System.out.println("Enter 5 - to leave a new pet at the shelter");
+			System.out.println("Enter 6 - to exit");
 			System.out.println();
 
-			String userChoice = input.next();
+	
 
 			if (userChoice.equals("1")) {
 				myVirtualPetShelter.feedAll();
 				System.out.println("Thanks for feeding us!");
+				System.out.println();
 			}
 
 			else if (userChoice.equals("2")) {
 				myVirtualPetShelter.waterAll();
 				System.out.println("Thank You for the cool drink of water.");
+				System.out.println();
 			}
 
 			else if (userChoice.equals("3")) {
 
 				System.out.println("Type in the name of the pet you would like to play with.");
-				String playPetName = input.next();
+				String playPetName = input.next();				
+				//myVirtualPetShelter.playOne(myVirtualPetShelter.findPet(playPetName));
 				System.out.println(playPetName + " says \"thanks for playing with me!\"");
+				System.out.println();
 				myVirtualPetShelter.showPets();// for testing - delete
 
 			}
@@ -59,6 +68,7 @@ public class VirtualPetShelterApp {
 				String adoptPetName = input.next();
 				myVirtualPetShelter.remove(myVirtualPetShelter.findPet(adoptPetName));
 				System.out.println(adoptPetName + " is so happy to go home with you.");
+				System.out.println();
 
 			}
 
@@ -69,8 +79,8 @@ public class VirtualPetShelterApp {
 				String newPetDescription = input.next();
 				// add a pet to map without naming the object
 				myVirtualPetShelter.add(new VirtualPet(newPetName, newPetDescription, 10, 10, 10, 10));
-				System.out
-						.println("We are so glad to have " + newPetDescription + " " + newPetName + " in our shelter.");
+				System.out.println("We are so glad to have " + newPetDescription + " " + newPetName + " in our shelter.");
+				System.out.println();
 			}
 
 			System.out.println("This is the status of the pets:"); // for testing - removeS after loop works
@@ -81,9 +91,8 @@ public class VirtualPetShelterApp {
 			tick += 1;
 			System.out.println("tick = " + tick); // for testing - delete
 
-		} while ((myVirtualPetShelter.reportHappiness()) <= 100);
+	} while (!userChoice.equals ("6"));
 			
-			//(myVirtualPetShelter.pets.values().myVirtualPet.gethappiness() <= 100);
 		
 		System.out.println("Have a nice day.");
 

@@ -68,9 +68,14 @@ public class VirtualPetShelter {
 	}
 
 	public void playOne() {
-		Set<String> name = pets.keySet();
-		for (pets.keySet().equals(name);;) {
-			((VirtualPet) name).play();
+		
+		//pets.playOne(.getVirtualPet(), pet);
+		
+	}
+		
+//		Set<String> name = pets.keySet();
+//		for (pets.keySet().equals(name);;) {
+//			((VirtualPet) name).play();
 		
 		//pets.keySet().play();
 		
@@ -79,8 +84,8 @@ public class VirtualPetShelter {
 		
 //		for (pets.keySet().equals(name);;) {
 //			((VirtualPet) name).play();
-		}
-	}
+		
+	
 
 	public void reportHappiness() {
 		for (VirtualPet pet : pets.values()) {
