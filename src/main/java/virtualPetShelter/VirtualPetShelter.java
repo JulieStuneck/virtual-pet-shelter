@@ -67,11 +67,14 @@ public class VirtualPetShelter {
 
 	}
 
-	public void playOne() {
+	public void playOne(String name) {
 		
-		pets.play(pet.getVirtualPet(), pet);
+		pets.findPet(name).play();
 		
 	}
+	
+	//public void play(String name) {
+	//pets.get(name).activity();
 		
 //		Set<String> name = pets.keySet();
 //		for (pets.keySet().equals(name);;) {
