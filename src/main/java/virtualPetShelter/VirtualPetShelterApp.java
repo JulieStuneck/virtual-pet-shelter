@@ -17,13 +17,14 @@ public class VirtualPetShelterApp {
 		myVirtualPetShelter.add(pet1);
 		myVirtualPetShelter.add(pet2);
 		myVirtualPetShelter.add(pet3);
-		
-		String userChoice = input.next();
 
-		do {
+	
 			System.out.println("Thanks for volunteering at our shelter!");
 			System.out.println();
+			
+			String userChoice;
 
+			do {
 			System.out.println("This is the status of the pets:");
 			myVirtualPetShelter.showPets();
 			System.out.println();
@@ -37,8 +38,9 @@ public class VirtualPetShelterApp {
 			System.out.println("Enter 5 - to leave a new pet at the shelter");
 			System.out.println("Enter 6 - to exit");
 			System.out.println();
+			userChoice = input.next();
 
-	
+		
 
 			if (userChoice.equals("1")) {
 				myVirtualPetShelter.feedAll();
@@ -89,7 +91,7 @@ public class VirtualPetShelterApp {
 			int tick = 0;
 			myVirtualPetShelter.tick();
 			tick += 1;
-			System.out.println("tick = " + tick); // for testing - delete
+			System.out.println("tick = " + tick); 
 
 	} while (!userChoice.equals ("6"));
 			

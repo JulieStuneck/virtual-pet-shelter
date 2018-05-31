@@ -69,7 +69,7 @@ public class VirtualPetShelter {
 
 	public void playOne() {
 		
-		//pets.playOne(.getVirtualPet(), pet);
+		pets.play(pet.getVirtualPet(), pet);
 		
 	}
 		
